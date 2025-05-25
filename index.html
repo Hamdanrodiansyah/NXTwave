@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NXT WAVE</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="brand">
+        <img src="img/logo.png" alt="Logo Brand" class="logo" />
+        <span class="brand-name">NXT WAVE</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Produk</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Cari produk..." />
+      </div>
+    </header>
+
+    <!-- ===== CONTENT (Hero Section) ===== -->
+    <section class="content hero-section">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Gaya Simpel, Elegan, dan Berani</h1>
+        <p>Eksplorasi koleksi terbaik kami dalam warna hitam putih yang tidak lekang oleh waktu. Tampilkan kepribadianmu dengan sentuhan minimalis yang memukau.</p>
+        <a href="#" class="btn btn-primary">Lihat Koleksi</a>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCT ===== -->
+    <section class="product">
+      <h3>Produk Unggulan</h3>
+
+      <div class="slider-wrapper">
+        <button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
+
+        <div class="product-slider" id="product-slider">
+          <div class="product-slide">
+            <img src="img/p1.jpeg" alt="Kaos Hitam Minimalis" />
+            <p>Kaos Hitam Minimalis</p>
+          </div>
+          <div class="product-slide">
+            <img src="img/p2.jpeg" alt="Kaos Putih Bold" />
+            <p>Kaos Putih Bold</p>
+          </div>
+          <div class="product-slide">
+            <img src="img/p3.jpeg" alt="Kaos Kombinasi" />
+            <p>Kaos Kombinasi</p>
+          </div>
+          <div class="product-slide">
+            <img src="img/p4.jpeg" alt="Kaos Kombinasi" />
+            <p>Kaos Kombinasi</p>
+          </div>
+          <div class="product-slide">
+            <img src="img/p5.jpeg" alt="Kaos Kombinasi" />
+            <p>Kaos Kombinasi</p>
+          </div>
+          <div class="product-slide">
+            <img src="img/p6.jpeg" alt="Kaos Kombinasi" />
+            <p>Kaos Kombinasi</p>
+          </div>
+        </div>
+
+        <button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ===== INTRO/ABOUT PRODUCT ===== -->
+    <section class="about-product">
+      <div class="container">
+        <h3>Mengapa Memilih Produk Kami?</h3>
+        <p>Di Hitam Putih Distro, kami percaya bahwa kesederhanaan adalah bentuk tertinggi dari keanggunan. Produk kami dirancang dengan filosofi minimalis namun berkarakter, memberikan kesan kuat tanpa perlu warna mencolok.</p>
+        <ul>
+          <li><strong>Material Premium:</strong> Menggunakan bahan berkualitas tinggi yang tahan lama dan nyaman dipakai seharian.</li>
+          <li><strong>Desain Eksklusif:</strong> Kombinasi antara gaya jalanan modern dan kesederhanaan klasik hitam putih.</li>
+          <li><strong>Filosofi Unik:</strong> Setiap produk membawa pesan tentang dualitas, keseimbangan, dan keberanian mengekspresikan diri.</li>
+        </ul>
+        <p>Lebih dari sekadar pakaian — ini adalah pernyataan gaya hidup. Kenakan kepercayaan diri Anda dalam balutan warna hitam dan putih.</p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>&copy; 2025 NXT WAVE. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+      let currentIndex = 0;
+      const slider = document.getElementById('product-slider');
+      const slides = document.querySelectorAll('.product-slide');
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      function prevSlide() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      }
+
+      function nextSlide() {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+          updateSlider();
+        }
+      }
+    </script>
+  </body>
+</html>
