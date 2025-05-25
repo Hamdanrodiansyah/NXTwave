@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NXT WAVE</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -13,16 +13,27 @@
         <img src="img/logo.png" alt="Logo Brand" class="logo" />
         <span class="brand-name">NXT WAVE</span>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Produk</a></li>
-          <li><a href="#">Tentang</a></li>
-          <li><a href="#">Kontak</a></li>
-        </ul>
-      </nav>
-      <div class="search-box">
-        <input type="text" placeholder="Cari produk..." />
+
+      <!-- Hamburger Button -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-container" id="nav-menu">
+        <nav>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="search-box">
+          <input type="text" placeholder="Cari produk..." />
+        </div>
       </div>
     </header>
 
@@ -93,29 +104,6 @@
       <p>&copy; 2025 NXT WAVE. All rights reserved.</p>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
-    <script>
-      let currentIndex = 0;
-      const slider = document.getElementById('product-slider');
-      const slides = document.querySelectorAll('.product-slide');
-
-      function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-      }
-
-      function prevSlide() {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateSlider();
-        }
-      }
-
-      function nextSlide() {
-        if (currentIndex < slides.length - 1) {
-          currentIndex++;
-          updateSlider();
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
