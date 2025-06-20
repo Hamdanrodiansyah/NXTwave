@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semua Produk - NXT WAVE</title>
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/produk.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+      <div class="brand">
+        <img src="img/logofixed.png" alt="Logo Brand" class="logo" />
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-container" id="nav-menu">
+        <nav>
+          <ul>
+            <li><a href="index.html#beranda">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="index.html#tentang">Tentang</a></li>
+            <li><a href="index.html#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <div class="search-box">
+          <input type="text" placeholder="Cari produk..." />
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== SECTION PRODUK ===== -->
+    <section class="produk-list">
+      <h2>Semua Produk</h2>
+      <div class="produk-grid">
+        <div class="produk-card">
+          <img src="img/kaos1.jpeg" alt="Kaos Hitam Minimalis" />
+          <h3>Kaos Hitam Minimalis</h3>
+          <p class="harga">Rp 100.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <div class="produk-card">
+          <img src="img/kaos2.jpeg" alt="Kaos Putih Bold" />
+          <h3>Kaos Putih Bold</h3>
+          <p class="harga">Rp 120.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <div class="produk-card">
+          <img src="img/kaos3.jpeg" alt="Kaos Kombinasi" />
+          <h3>Kaos Kombinasi</h3>
+          <p class="harga">Rp 130.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <div class="produk-card">
+          <img src="img/kaos3.jpeg" alt="Kaos Kombinasi" />
+          <h3>Kaos Kombinasi</h3>
+          <p class="harga">Rp 130.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <div class="produk-card">
+          <img src="img/kaos3.jpeg" alt="Kaos Kombinasi" />
+          <h3>Kaos Kombinasi</h3>
+          <p class="harga">Rp 130.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <div class="produk-card">
+          <img src="img/kaos3.jpeg" alt="Kaos Kombinasi" />
+          <h3>Kaos Kombinasi</h3>
+          <p class="harga">Rp 130.000</p>
+          <button class="btn-beli">Beli</button>
+        </div>
+        <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>&copy; 2025 NXT WAVE. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('show');
+      }
+    </script>
+  </body>
+</html>
